@@ -18,11 +18,12 @@ git clone https://github.com/fahrillrizal/API-ProjectManagement.git
 ### Konfigurasi Environment
 Buat file `.env` berdasarkan template yang ada dan sesuaikan konfigurasi database serta JWT Secret Key:
 ```env
-PGHOST=localhost
+PGHOST=your_db_host
 PGUSER=your_db_user
 PGPASSWORD=your_db_password
 PGNAME=your_db_name
-PGPORT=5432
+PGPORT=your_db_port
+PORT=your_application_port
 JWT_SECRET=your_secret_key
 ```
 
