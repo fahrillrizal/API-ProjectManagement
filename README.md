@@ -42,7 +42,6 @@ Aplikasi akan berjalan di `http://localhost:8080`
 
 - **`controllers/`**: Berisi handler untuk menangani HTTP request dan memberikan response.
 - **`database/`**: Berisi konfigurasi dan koneksi ke database PostgreSQL.
-- **`docs/`**: Dokumentasi API.
 - **`middleware/`**: Middleware untuk autentikasi
 - **`models/`**: Definisi struktur data dan model untuk database menggunakan GORM.
 - **`repository/`**: Layer akses database untuk memisahkan logika query dari service.
