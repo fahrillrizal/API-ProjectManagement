@@ -1,0 +1,6 @@
+go*
+.env*
+Dockerfile
+docker-compose.yaml
+.dockerignore
+.DS_Store
