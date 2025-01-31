@@ -91,9 +91,14 @@ func EditProjectController(c *gin.Context) {
 
 	project, err := services.GetProjectByIDService(db, uint(projectID), userID)
 	if err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Project tidak ditemukan"})
-		return
-	}
+        errorMsg := err.Error()
+        statusCode := http.StatusNotFound
+        if errorMsg == "anda tidak memiliki akses ke project ini" {
+            statusCode = http.StatusForbidden
+        }
+        c.JSON(statusCode, gin.H{"error": errorMsg})
+        return
+    }
 
 	project.Name = input.Name
 	project.Description = input.Description
